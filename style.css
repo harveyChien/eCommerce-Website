@@ -1,6 +1,241 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --Primary: #b88e2f;
+  --Font-color: #333;
+  --Color-gray: #3a3a3a;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 54px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
 
 body {
   font-family: "Poppins", sans-serif;
 }
 
+/* Header */
+.header {
+  padding: 30px 0;
+}
+
+.body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo_link span {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-size: 2.125rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.link-1 {
+  display: flex;
+  gap: 75px;
+}
+
+.link-1 li {
+  color: #000;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.link-2 {
+  display: flex;
+  gap: 45px;
+}
+
+/* End header */
+
+/* Hero */
+.hero {
+  background-image: url(./images/scandinavian-interior-mockup-wall-decal-background\ 1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 800px;
+}
+
+.body-content {
+  background: #fff3e3;
+  max-width: 40.1875rem;
+  border-radius: 10px;
+  position: absolute;
+  content: "";
+  right: 58px;
+  top: 328px;
+}
+
+.body-content .content {
+  padding: 63px 56px 23px 41px;
+}
+
+.body-content span {
+  color: var(--Font-color);
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.body-content .title-main {
+  font-size: 3.25rem;
+  color: var(--Primary);
+  line-height: 65px;
+}
+
+.body-content .text {
+  color: var(--Font-color);
+  font-size: 1.125rem;
+}
+
+.body-content button {
+  margin: 41px;
+  padding: 25px 72px;
+  background: var(--Primary);
+  color: #fff;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  border: 0;
+  margin-top: 23px;
+}
+/* End hero */
+
+
+/* Section 3 */
+.section-3 {
+  padding: 50px 0;
+}
+
+.section-3 .name {
+  text-align: center;
+}
+
+.name .title-h2 {
+  font-size: 2rem;
+  line-height: normal;
+}
+
+.name .text {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+.section-3 .image-list {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.section-3 .image-list img {
+  border-radius: 10px;
+}
+
+.section-3 .image-list span {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--Font-color);
+  line-height: normal;
+}
+/* End section 3 */
+
+/* Section 4 */
+.section-4 {
+  padding-top: 6px;
+  padding-bottom: 69px;
+}
+
+.section-4 .title-h2 {
+  color: var(--Color-gray);
+  text-align: center;
+  line-height: 120%;
+}
+
+.section-4 .list-card {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.section-4 .card {
+  background: #f3f5f7;
+  width: 100%;
+  max-width: 285px;
+}
+
+.section-4 .info {
+  padding: 16px 16px 30px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-4 .title-h3 {
+  font-size: 1.5rem;
+  font-width: 600;
+  line-height: 120%;
+}
+
+.section-4 p {
+  color: #898989;
+  font-weight: 500;
+  list-style-type: 150%;
+}
+
+.section-4 .price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-4 .new-price {
+  font-size: 1.125rem;
+  color: var(--Color-gray);
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.section-4 .old-price {
+  color: #b0b0b0;
+  text-decoration: line-through;
+  line-height: 150%;
+}
+
+.section-4 .show-more {
+  /* max-width: 245px; */
+  display: block;
+  color: var(--Primary);
+  border: 1px solid var(--Primary);
+  background: #fff;
+  padding: 12px 72px;
+  margin: 32px auto 0;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.section-4 .show-more:hover {
+  background-color: var(--Primary);
+  color: #ffffff;
+}
+/* End ection 4 */
