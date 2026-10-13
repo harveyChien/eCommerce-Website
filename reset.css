@@ -1,0 +1,155 @@
+/* Quy tắc box-sizing: width/height đã bao gồm padding và border */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Ngăn trình duyệt (nhất là trên mobile) tự phóng to cỡ chữ */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Cuộn mượt khi bấm link neo, chỉ áp dụng nếu người dùng không tắt hiệu ứng chuyển động */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Xóa margin và padding mặc định để tự kiểm soát khoảng cách */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Bỏ dấu đầu dòng cho ul, ol (vì thường là list đã được tự style lại) */
+ul,
+ol {
+  list-style-type: none;
+}
+
+/* Thiết lập mặc định cơ bản cho body */
+body {
+  min-height: 100vh; /* dự phòng cho trình duyệt cũ */
+  min-height: 100dvh; /* chính xác hơn trên mobile (tính cả thanh địa chỉ) */
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* chữ mịn hơn trên macOS */
+}
+
+/* Dòng chữ gọn hơn cho tiêu đề và các thành phần tương tác */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Cân bằng cách xuống dòng của tiêu đề cho đều và đẹp */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Tránh dòng cuối của đoạn văn chỉ có một từ lẻ loi */
+p {
+  text-wrap: pretty;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Chữ hoặc URL quá dài sẽ tự xuống dòng, không làm tràn container */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Link không có class sẽ dùng style mặc định (kế thừa màu chữ xung quanh) */
+/* a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+} */
+
+/* Giúp ảnh và media dễ xử lý: không tràn container, không có khoảng trống lạ bên dưới */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto; /* giữ đúng tỷ lệ khi ảnh bị thu nhỏ */
+  display: block;
+}
+
+/* Input, button, textarea, select kế thừa font của trang */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Button và label cho người dùng biết là bấm được */
+button,
+label {
+  cursor: pointer;
+}
+
+/* Đảm bảo textarea không có thuộc tính rows không bị quá nhỏ */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Thẻ có thuộc tính hidden thì luôn phải ẩn */
+[hidden] {
+  display: none;
+}
+
+/* Bảng: gộp đường viền giữa các ô, bỏ khoảng hở */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Fieldset bỏ viền và padding mặc định */
+fieldset {
+  border: 0;
+  padding: 0;
+}
+
+/* Phần tử được neo tới (qua #id) sẽ có thêm khoảng cách khi cuộn tới */
+:target {
+  scroll-margin-block: 5ex;
+}
